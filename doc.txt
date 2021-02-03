@@ -25,3 +25,5 @@ npm install -g expo-cli
 expo init AudioLibroMp3
 cd AudioLibroMp3
 npm start
+
+expo install expo-av
