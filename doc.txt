@@ -22,6 +22,6 @@ nvm install lts/fermium
 nvm list
 node -v
 npm install -g expo-cli
-expo init Pruebita
-cd Pruebita
+expo init AudioLibroMp3
+cd AudioLibroMp3
 npm start
