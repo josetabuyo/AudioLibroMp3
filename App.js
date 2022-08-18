@@ -9,15 +9,19 @@ function sleep(ms) {
 }
 
 
-var timeElapsed = Date.now();
+var app = this;
+
+app.setState({
+  'timeElapsed': Date.now()
+})
 
 
-setInterval(function(){
-
-
-  timeElapsed = timeElapsed - Date.now();
-
-}, 1000);
+// setInterval(function(){
+//   app.setState({
+//     'timeElapsed': state.timeElapsed - Date.now()
+//   })
+//
+// }, 1000);
 
 export default function App() {
   const [sound, setSound] = React.useState();
@@ -70,7 +74,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Hola compañera Noelía, que gusto es verla este día</Text>
-      <Text>{timeElapsed}</Text>
+      <Text>{app.state.timeElapsed}</Text>
       <Button title="Play Sound" onPress={playSound} />
       <Button title="Stop Sound" onPress={stopSound} />
     </View>
